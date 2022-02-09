@@ -10,11 +10,14 @@ import AppBar from '@material-ui/core/AppBar';
 // import MenuIcon from '@material-ui/icons/Menu';
 import Student from './components/Student';
 import Exo from './components/Exo';
-
+import {Routes, Route} from 'react-router-dom';
 export default function ButtonAppBar() {
   return (
     <div>
-      <Exo/>
+      <Routes>
+        <Route path='/'  element={<Student/>} ></Route>
+        <Route path='/exo'  element={<Exo/>} ></Route>
+      </Routes>
     </div>
   );
 }
